@@ -106,8 +106,6 @@ pie_plot  (analysis=data1, COL, topN,colorsw = colorscat,label="L_sp")
 
 ################################################################################FIG2
 
-
-
 #alpha （根/叶，根际，叶际PCOA） 
 
 metadata=read.csv("metadata.csv", header=T, row.names=1, comment.char="", stringsAsFactors=F)
@@ -875,13 +873,13 @@ ureolysis C4C4C1
 library(dplyr)
 
 taxonomy=read.csv("total-genus.csv", header=T,  comment.char="", stringsAsFactors=F)
-taxonomy2=read.csv("animal . Genus .RA.csv", header=T,  comment.char="", stringsAsFactors=F)
+taxonomy2=read.csv("animal . Genus .RA2.csv", header=T,  comment.char="", stringsAsFactors=F)
 total <- full_join(taxonomy, taxonomy2, by = "genus")
 total[is.na(total)]<-0
 write.csv(total, "all-aps-genus.csv")
 
 taxonomy=read.csv("total-order.csv", header=T,  comment.char="", stringsAsFactors=F)
-taxonomy2=read.csv("animal . Order .RA.csv", header=T,  comment.char="", stringsAsFactors=F)
+taxonomy2=read.csv("animal . Order .RA2.csv", header=T,  comment.char="", stringsAsFactors=F)
 total <- full_join(taxonomy, taxonomy2, by = "order")
 total[is.na(total)]<-0
 write.csv(total, "all-aps-order.csv")
@@ -951,76 +949,6 @@ bb_plot (data1, COL, Topn,shapes=shapes, colors=colorscat,label="NOAMotu_L_RF")
 
 data1=read.csv("noanimal_R_OTU_RF.csv", header=T, row.names=1, comment.char="", stringsAsFactors=F)
 bb_plot (data1, COL, Topn,shapes=shapes, colors=colorscat,label="NOAMotu_R_RF") 
-
-
-##网络特征气泡图
-library(ggplot2)
-
-net<-read.csv("net.csv", header=T, row.names=1, comment.char="", stringsAsFactors=F)
-colors1 <-c(L="#a4cfa9",R ="#B2FA3E")
-shapes<-c(Seedling=22,Tillering =23,Elongation =24)
-colors2 <- c(no="#000000",all ="#00AEFF")
-
-
-p <-ggplot(net,aes(clustering_coefficient,node)) +
-geom_point(aes(fill=Organ,colour =anmi,size = average_degree,shape = Develop),alpha=0.9)+
-scale_fill_manual(values = colors1)+
-scale_colour_manual(values = colors2)+
-scale_shape_manual(values = shapes)+
-scale_size_continuous(range=c(5,10)) +  
-theme(plot.margin=unit(c(0.5,0.5,0.5,0.5),units=,"cm"),
-        strip.text = element_text(size=12),
-        axis.line = element_line(color = "black",linewidth = 0.25),
-        axis.ticks =  element_line(color = "black",linewidth = 0.25),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.text.y = element_text(color="black",size=10),
-        axis.text.x = element_text(color="black",size=10,angle = 0),
-        panel.spacing.x = unit(0,"cm"),
-        panel.border = element_blank(),
-       panel.spacing = unit(0,"lines")
-       )
-p
-
-ggsave(paste0("net_struc",".pdf"), p, width=5, height=5.5, units="in")
-ggsave(paste0("net_struc",".png"), p, width=5, height=5.5, units="in")
-
-#################hub
-#################hub
-
-library(ggrepel)
-library(ggplot2)
-library( tibble)
-
-net2<-read.csv("hub.csv", header=T, row.names=1, comment.char="", stringsAsFactors=F)
-
-shapes<-c(Seedling=22,Tillering =23,Elongation =24)
-
-
-p2 <-ggplot(net2,aes(betweenesscentrality,closnesscentrality)) +
-geom_point(aes(fill=organ,colour = anmimal,size = degree,shape = development),alpha=0.8)+
-scale_fill_manual(values = colors1)+
-scale_colour_manual(values = colors1)+
-scale_shape_manual(values = shapes)+
-scale_size_continuous(range=c(5,10)) +  
-theme(plot.margin=unit(c(0.5,0.5,0.5,0.5),units=,"cm"),
-        strip.text = element_text(size=12),
-        axis.line = element_line(color = "black",linewidth = 0.25),
-        axis.ticks = element_line(color = "black",linewidth = 0.25),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.text.y = element_text(color="black",size=10),
-        axis.text.x = element_text(color="black",size=10,angle = 0),
-        panel.spacing.x = unit(0,"cm"),
-        panel.border = element_blank(),
-       panel.spacing = unit(0,"lines")
-       )+
-geom_label_repel(data = net2, aes(label=label, fill=order), size=4, color="white",
-segment.size=0.25,segment.color = "black", nudge_y=0.01, nudge_x=60,direction="x", hjust=0.5)
-p2
-p2
-ggsave(paste0("hubs",".pdf"), p2, width=8, height=8, units="in")
-ggsave(paste0("hubs",".png"), p2, width=8, height=8, units="in")
 
 
 ########################微生物组变异贡献度分析
