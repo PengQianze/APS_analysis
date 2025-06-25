@@ -1,0 +1,11 @@
+﻿row,MeanDecreaseGini,class,Seedling,Tillering,Elongation
+ureolysis,0.820337374,N,33.16666667,804.5,1427.5
+dark_sulfite_oxidation,0.782630014,S,0,2.833333333,15
+respiration_of_sulfur_compounds,0.770244444,S,1,1160.333333,62.66666667
+intracellular_parasites,0.607542857,animal_associated,116.8333333,6.833333333,0
+animal_parasites_or_symbionts,0.604328571,animal_associated,9865.166667,1784.833333,1836.833333
+nitrogen_fixation,0.468266667,N,311.3333333,137.3333333,19.5
+nitrate_reduction,0.453315729,N,9825.166667,1805.833333,6896.666667
+chemoheterotrophy,0.434632323,C,41157.5,22909.66667,32695.16667
+phototrophy,0.278062482,Other,0.5,94.5,15.83333333
+predatory_or_exoparasitic,0.237857143,animal_associated,177,263.6666667,2604.5

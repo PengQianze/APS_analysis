@@ -1,0 +1,11 @@
+﻿row,class,Group,Seedling_R,Tillering_R,Elongation_R
+hydrocarbon_degradation,C,R,1319.833333,404,204.6666667
+oil_bioremediation,C,R,0.166666667,21.33333333,318.6666667
+aliphatic_non_methane_hydrocarbon_degradation,C,R,1149.666667,124.1666667,1.666666667
+photoheterotrophy,C,R,5.833333333,314.3333333,2533.333333
+iron_respiration,Other,R,32.66666667,1445,1003.833333
+aerobic_nitrite_oxidation,N,R,3.333333333,13.66666667,155.1666667
+nitrate_respiration,N,R,105.8333333,161.3333333,1022
+nitrate_reduction,N,R,806.1666667,367.1666667,3686.833333
+sulfate_respiration,S,R,0,51.33333333,1092.5
+phototrophy,Other,R,77.5,829.6666667,2717.666667

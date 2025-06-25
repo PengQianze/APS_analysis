@@ -1,0 +1,13 @@
+﻿,Network,node,edge,average_degree,clustering_coefficient,anmi,Organ,Develop
+1,EL,111,465,8.378,0.714,all,L,Elongation
+2,ER,865,15923,36.816,0.538,all,R,Elongation
+3,SL,76,106,4.211,0.524,all,L,Seedling
+4,SR,314,2022,11.859,0.442,all,R,Seedling
+5,TL,450,3360,14.933,0.51,all,L,Tillering
+6,TR,476,4580,19.244,0.544,all,R,Tillering
+7,EL,93,370,7.957,0.681,no,L,Elongation
+8,ER,852,15380,36.103,0.545,no,R,Elongation
+9,SL,70,147,4.2,0.59,no,L,Seedling
+10,SR,334,1921,11.503,0.457,no,R,Seedling
+11,TL,422,2997,14.204,0.514,no,L,Tillering
+12,TR,465,4464,19.2,0.552,no,R,Tillering

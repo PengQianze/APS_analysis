@@ -1,0 +1,17 @@
+﻿,label,Label,anmimal,order,degree,closnesscentrality,betweenesscentrality,organ,development
+1,OTU_331,EL,all,Clostridiales,33,0.480519,307.305088,L,Elongation
+2,OTU_71,EL,all,Clostridiales,32,0.477419,241.256638,L,Elongation
+3,OTU_1603,ER,all,Rhizobiales,160,0.417391,2818.035471,R,Elongation
+4,OTU_217,SL,all,Clostridiales,11,0.923077,3.508442,L,Seedling
+5,OTU_293,SL,all,Bacteroidales,11,0.923077,6.59026,L,Seedling
+6,OTU_31,SR,all,Rhizobiales,44,0.371991,4048.643681,R,Seedling
+7,OTU_82,SR,all,Rhizobiales,44,0.384615,1945.772459,R,Seedling
+8,OTU_278,TL,all,Erysipelotrichales,54,0.346184,1106.902975,L,Tillering
+9,OTU_428,TR,all,Legionellales,73,0.376089,1134.845567,R,Tillering
+10,OTU_71,EL,no,Clostridiales,29,0.385475,247.524939,L,Elongation
+11,OTU_1603,ER,no,Rhizobiales,156,0.415527,2623.415992,R,Elongation
+12,OTU_214,SL,no,Pseudomonadales,12,1,5.161905,L,Seedling
+13,OTU_31,SR,no,Rhizobiales,52,0.38993,6055.669399,R,Seedling
+14,OTU_82,SR,no,Rhizobiales,41,0.382759,1581.698672,R,Seedling
+15,OTU_282,TL,no,Bacteroidales,49,0.347073,793.540731,L,Tillering
+16,OTU_428,TR,no,Legionellales,74,0.378999,1563.011426,R,Tillering

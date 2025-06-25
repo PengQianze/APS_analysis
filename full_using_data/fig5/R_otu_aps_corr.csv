@@ -1,0 +1,21 @@
+,pvalue,r,alternative,method,data.name,Order,OTU 
+OTU_1469,0,-0.902992776,two.sided,Spearman's rank correlation rho,animal and x,Acidobacteriales,OTU_1469
+OTU_275,0,-0.888544892,two.sided,Spearman's rank correlation rho,animal and x,Acidobacteriales,OTU_275
+OTU_878,2.07297E-06,-0.874493091,two.sided,Spearman's rank correlation rho,animal and x,Solirubrobacterales,OTU_878
+OTU_613,4.07949E-06,-0.862749153,two.sided,Spearman's rank correlation rho,animal and x,Clostridiales,OTU_613
+OTU_210,8.50776E-06,-0.848663453,two.sided,Spearman's rank correlation rho,animal and x,Bacteroidales,OTU_210
+OTU_965,1.06554E-05,-0.844046474,two.sided,Spearman's rank correlation rho,animal and x,Bacteroidales,OTU_965
+OTU_355,1.19591E-05,-0.841620603,two.sided,Spearman's rank correlation rho,animal and x,Bacteroidales,OTU_355
+OTU_526,1.54328E-05,-0.836115836,two.sided,Spearman's rank correlation rho,animal and x,Clostridiales,OTU_526
+OTU_197,1.65013E-05,-0.834636809,two.sided,Spearman's rank correlation rho,animal and x,Campylobacterales,OTU_197
+OTU_1187,1.99752E-05,-0.830335788,two.sided,Spearman's rank correlation rho,animal and x,Subgroup_13,OTU_1187
+OTU_62,0.00E+00,0.845201238,two.sided,Spearman's rank correlation rho,animal and x,Enterobacteriales,OTU_62
+OTU_641,0.00E+00,0.839009288,two.sided,Spearman's rank correlation rho,animal and x,Xanthomonadales,OTU_641
+OTU_1782,2.93E-05,0.82137322,two.sided,Spearman's rank correlation rho,animal and x,Pseudonocardiales,OTU_1782
+OTU_717,4.95055E-05,0.808177411,two.sided,Spearman's rank correlation rho,animal and x,Burkholderiales,OTU_717
+OTU_519,0.00026815,0.757942404,two.sided,Spearman's rank correlation rho,animal and x,Xanthomonadales,OTU_519
+OTU_348,0.000284665,0.755913886,two.sided,Spearman's rank correlation rho,animal and x,Sphingomonadales,OTU_348
+OTU_1114,0.000421389,0.742111864,two.sided,Spearman's rank correlation rho,animal and x,Sphingomonadales,OTU_1114
+OTU_1598,0.000505915,0.735377098,two.sided,Spearman's rank correlation rho,animal and x,Pseudonocardiales,OTU_1598
+OTU_512,0.000577169,0.730397806,two.sided,Spearman's rank correlation rho,animal and x,Pseudomonadales,OTU_512
+OTU_469,0.000599204,0.72896241,two.sided,Spearman's rank correlation rho,animal and x,Bacteroidales,OTU_469
