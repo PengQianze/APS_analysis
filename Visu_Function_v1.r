@@ -122,7 +122,7 @@ PCOA_ANA <- function (taxonomy,metadata,analysisgroup = "TimeGrowth",
     theme(
       strip.text = element_text(size=12),
       axis.line = element_line(color = "black",linewidth = 0.25),
-      axis.ticks= element_line(colour = "black",size = 0.25),
+      axis.ticks= element_line(colour = "black",linewidth = 0.25),
       panel.grid.minor = element_blank(),
       panel.background = element_blank(),
       axis.text.y = element_text(color="black",size=10),
@@ -578,3 +578,70 @@ NET_ANA <- function (otu,metadata,analysisgroup = "TimeGrowth" ,fileter = 0.6){
   }
     return(groupall)
                      }
+
+
+######################shape_heatmap
+
+shape_heatmap<-function(data1,COL,shapes,colors,label="shape_heatmap"){
+library(ggplot2)
+data = as.data.frame(data1[, COL], row.names = row.names(data1))
+colnames(data)<- c("variable", "top" ,"STAGES","Stageord","allmean","enrichcompartment","enrichstages")
+p9<- ggplot(data,aes(y=reorder(variable,top, decreasing = TRUE),x=reorder(STAGES,Stageord)))+
+  geom_point(aes(size=allmean,
+                 fill=enrichcompartment,
+                 shape=enrichstages,
+                 color=enrichcompartment
+                 ))+
+scale_color_manual(values = colors)+                
+scale_fill_manual(values = colors)+
+scale_shape_manual(values = shapes)+
+scale_size_continuous(range=c(0,10)) +  
+theme(plot.margin=unit(c(0.5,0.5,0.5,0.5),units=,"cm"),
+        strip.text = element_text(size=12),
+        axis.line = element_line(color = "black",linewidth = 0.5),
+        axis.ticks =  element_line(color = "black",linewidth = 0.5),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.text.y = element_text(color="black",size=10),
+        axis.text.x = element_text(color="black",size=10,angle = 45),
+        panel.spacing.x = unit(0,"cm"),
+        panel.border = element_blank(),
+       panel.spacing = unit(0,"lines")
+       )+
+  labs(x=NULL,y=NULL)
+p9
+ggsave(paste0(label,"_heatplot",".pdf"), p9, width=6, height=8, units="in")
+ggsave(paste0(label,"_heatplot",".png"), p9, width=6, height=8, units="in")
+
+
+}
+
+##################################################气泡图
+bubble_plot <- function (data1,COL,colors1,shapes,colors2,label="bubble_test") {
+library(ggplot2)
+data = as.data.frame(data1[, COL], row.names = row.names(data1))
+colnames(data)<- c("x", "y" ,"sizes","colors1","colors2","shapes")
+p <-ggplot(data,aes(x,y)) +
+geom_point(aes(fill=colors1,colour =colors2,size = sizes,shape = shapes),alpha=0.9)+
+scale_fill_manual(values = colors1)+
+scale_colour_manual(values = colors2)+
+scale_shape_manual(values = shapes)+
+scale_size_continuous(range=c(5,10)) +  
+theme(plot.margin=unit(c(0.5,0.5,0.5,0.5),units=,"cm"),
+        strip.text = element_text(size=12),
+        axis.line = element_line(color = "black",linewidth = 0.25),
+        axis.ticks =  element_line(color = "black",linewidth = 0.25),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.text.y = element_text(color="black",size=10),
+        axis.text.x = element_text(color="black",size=10,angle = 0),
+        panel.spacing.x = unit(0,"cm"),
+        panel.border = element_blank(),
+       panel.spacing = unit(0,"lines")
+       )
+p
+
+ggsave(paste0(label,"_bubble_plot",".pdf"), p, width=5, height=5.5, units="in")
+ggsave(paste0(label,"_bubble_plot",".png"), p, width=5, height=5.5, units="in")
+
+}                     
